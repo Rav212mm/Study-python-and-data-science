@@ -1,3 +1,6 @@
+import os
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
 address = ["Flat Floor Street", "18", "New York"]
 pins = {"Mike":1234, "Joe":1111, "Jack":2222}
 
@@ -6,7 +9,7 @@ print(address[0], address[1])
 pin = int(input("Enter your pin: "))
 
 def find_in_file(f):    
-    myfile = open("sample.txt")
+    myfile = open(dir_path + '/' + 'sample.txt')
     fruits = myfile.read()
     fruits = fruits.splitlines()
     if f in fruits:

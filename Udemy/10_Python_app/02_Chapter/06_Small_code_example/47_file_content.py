@@ -7,4 +7,4 @@ for item in content_splitlines:
     print(len(item))
 opened.close()
 
-print(content.strip()
+print(content.strip())

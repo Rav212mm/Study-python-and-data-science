@@ -1,0 +1,7 @@
+pip install glob2 
+
+python -m pip install glob2 
+
+pip3 install glob2 
+
+python3 -m pip install glob2 

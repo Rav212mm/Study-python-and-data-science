@@ -7,5 +7,5 @@ def szukaj(word):
     for i in range(len(searched_mean[word])):
         print(i,')', searched_mean[word][i])
 
-słowo = input('\nPodaj szukaną definicję :')
+słowo = input('\nSearch in dictionary :')
 szukaj(słowo)

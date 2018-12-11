@@ -1,11 +1,12 @@
 import json
 
-def szukaj(word):
-    print('\nDefinision of ',word,':\n')
-    word = str(word)                           
-    searched_mean = json.load(open('data.json'))
-    for i in range(len(searched_mean[word])):
-        print(i,')', searched_mean[word][i])
+def szukaj():
+    word = input('\nFind definision :\n')
+    opened_dict = json.load(open('data.json'))    
+    if word in opened_dict.keys():
+        print(opened_dict[word])
+    else:
+        print('\nNo definition in dictionary.\nSearch a new definition')
+        szukaj()
 
-słowo = input('\nSearch in dictionary :')
-szukaj(słowo)
+szukaj()

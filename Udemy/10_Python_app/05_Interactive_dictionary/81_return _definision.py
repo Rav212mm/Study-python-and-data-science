@@ -1,7 +1,7 @@
 import json
 
 def szukaj():
-    word = input('\nFind definision :\n')
+    word = input('\nFind definision :\n').lower()
     opened_dict = json.load(open('data.json'))    
     if word in opened_dict.keys():
         print(opened_dict[word])

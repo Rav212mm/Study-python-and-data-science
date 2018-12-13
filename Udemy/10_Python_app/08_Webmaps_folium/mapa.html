@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.3.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_a246c84446cb43afa8c5260a98dfabc8 {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_a246c84446cb43afa8c5260a98dfabc8" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_a246c84446cb43afa8c5260a98dfabc8 = L.map(
+        'map_a246c84446cb43afa8c5260a98dfabc8', {
+        center: [51.11, 17.03],
+        zoom: 7,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+    
+    
+    var tile_layer_ef546bdfac344bc79e30c95c6cd859c6 = L.tileLayer(
+        'https://{s}.tiles.mapbox.com/v3/mapbox.world-bright/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_a246c84446cb43afa8c5260a98dfabc8);
+    
+            var feature_group_3385d4e8236b4895906668d11e6a668a = L.featureGroup(
+                ).addTo(map_a246c84446cb43afa8c5260a98dfabc8);
+        
+    
+        var marker_c2a8872771dd48bb819ec65dd87f5629 = L.marker(
+            [52.17, 21.57],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(feature_group_3385d4e8236b4895906668d11e6a668a);
+        
+    
+
+                var icon_77c54f1e259b4bc7a56ccc8fd5820315 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c2a8872771dd48bb819ec65dd87f5629.setIcon(icon_77c54f1e259b4bc7a56ccc8fd5820315);
+            
+    
+            var popup_f4f0b6c114d04cd49a944ce0b0f9c10e = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_e52967a7066f4b6e8fc83f1ec3642a86 = $(`<div id="html_e52967a7066f4b6e8fc83f1ec3642a86" style="width: 100.0%; height: 100.0%;">05-300 Mińsk Mazowiecki, Sienicka 57B, Polska</div>`)[0];
+                popup_f4f0b6c114d04cd49a944ce0b0f9c10e.setContent(html_e52967a7066f4b6e8fc83f1ec3642a86);
+            
+
+            marker_c2a8872771dd48bb819ec65dd87f5629.bindPopup(popup_f4f0b6c114d04cd49a944ce0b0f9c10e)
+            ;
+
+            
+        
+    
+        var marker_1c1e3780b3ba443999f8efb5b7b6f77b = L.marker(
+            [51.11, 17.03],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(feature_group_3385d4e8236b4895906668d11e6a668a);
+        
+    
+
+                var icon_10f6ac65abe44d06bf58871e1b554e88 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1c1e3780b3ba443999f8efb5b7b6f77b.setIcon(icon_10f6ac65abe44d06bf58871e1b554e88);
+            
+    
+            var popup_140d714e7a6e47b1a4df127e70455751 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_54abc6abd96b4f98b7527b7720c9d5f4 = $(`<div id="html_54abc6abd96b4f98b7527b7720c9d5f4" style="width: 100.0%; height: 100.0%;">Wrocław</div>`)[0];
+                popup_140d714e7a6e47b1a4df127e70455751.setContent(html_54abc6abd96b4f98b7527b7720c9d5f4);
+            
+
+            marker_1c1e3780b3ba443999f8efb5b7b6f77b.bindPopup(popup_140d714e7a6e47b1a4df127e70455751)
+            ;
+
+            
+        
+    
+        var marker_69dec615c3984fe3851be666d9ba9e82 = L.marker(
+            [53.61, 18.27],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(feature_group_3385d4e8236b4895906668d11e6a668a);
+        
+    
+
+                var icon_788ae78688c14bb0992e5e20757f0963 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_69dec615c3984fe3851be666d9ba9e82.setIcon(icon_788ae78688c14bb0992e5e20757f0963);
+            
+    
+            var popup_c55fb0c670f24c72aaae917c0815e045 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_7fbce9e8a0a24230be00077a9a5e1487 = $(`<div id="html_7fbce9e8a0a24230be00077a9a5e1487" style="width: 100.0%; height: 100.0%;">Tleń, Osie, Świecki</div>`)[0];
+                popup_c55fb0c670f24c72aaae917c0815e045.setContent(html_7fbce9e8a0a24230be00077a9a5e1487);
+            
+
+            marker_69dec615c3984fe3851be666d9ba9e82.bindPopup(popup_c55fb0c670f24c72aaae917c0815e045)
+            ;
+
+            
+        
+</script>

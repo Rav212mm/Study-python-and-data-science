@@ -40,6 +40,7 @@ def update(quantity, price, item):
     cur.execute("UPDATE store SET quantity=?, price=? WHERE item=?", (quantity, price, item))
     conn.commit()
     conn.close()
+    
 
 print(view())
 update(4,2,'Vodka')

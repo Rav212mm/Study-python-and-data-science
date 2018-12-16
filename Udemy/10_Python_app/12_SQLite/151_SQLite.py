@@ -1,7 +1,7 @@
-import sqlite3
+import psycopg2
 
 def create_table():
-    conn = sqlite3.connect('lite.db')
+    conn = psycopg2.connect('lite.db')
     cur = conn.cursor()
     
     cur.execute('CREATE TABLE IF NOT EXISTS store (item TEXT, quantity INTEGER, price REAL)')
@@ -10,7 +10,7 @@ def create_table():
     conn.close()
 
 def insert(item, quantity, price):
-    conn = sqlite3.connect('lite.db')
+    conn = psycopg2.connect('lite.db')
     cur = conn.cursor()
     
     cur.execute("INSERT INTO store VALUES(?, ?, ?)", (item, quantity, price))
@@ -19,7 +19,7 @@ def insert(item, quantity, price):
     conn.close()
 
 def view():
-    conn = sqlite3.connect('lite.db')
+    conn = psycopg2.connect('lite.db')
     cur = conn.cursor()
 
     cur.execute("SELECT * FROM store")
@@ -28,14 +28,14 @@ def view():
     return rows
 
 def delete(item, quantity):
-    conn = sqlite3.connect('lite.db')
+    conn = psycopg2.connect('lite.db')
     cur = conn.cursor()
     cur.execute("DELETE FROM store WHERE item=? AND quantity=?", (item,3))
     conn.commit()
     conn.close()
 
 def update(quantity, price, item):
-    conn = sqlite3.connect('lite.db')
+    conn = psycopg2.connect('lite.db')
     cur = conn.cursor()
     cur.execute("UPDATE store SET quantity=?, price=? WHERE item=?", (quantity, price, item))
     conn.commit()
@@ -43,7 +43,7 @@ def update(quantity, price, item):
     
 
 print(view())
-update(4,2,'Vodka')
+#update(4,2,'Vodka')
 #insert('Oil', 3, 13)
 #delete('Oil', 3)
 print(view())

@@ -20,13 +20,35 @@ def insert_command():
     list1.delete(0, END)
     row = e1_value.get(), e2_value.get(), e3_value.get(), e4_value.get()
     list1.insert(END, row)
+    view_command()
 
 def get_selected_row(event):
-    index = list1.curselection()
-    print(index)
+    try:
+        global selected_tuple
+        index = list1.curselection()[0]
+        selected_tuple = list1.get(index)
+
+        e1.delete(0, END)
+        e1.insert(END, selected_tuple[1])
+        e2.delete(0, END)
+        e2.insert(END, selected_tuple[2])
+        e3.delete(0, END)
+        e3.insert(END, selected_tuple[3])
+        e4.delete(0, END)
+        e4.insert(END, selected_tuple[4])
+    except IndexError:
+        pass
+def delete_command():
+    backend.delete(selected_tuple[0])
+    view_command()
+
+def update_command():
+    backend.update(selected_tuple[0], e1_value.get(),
+                   e2_value.get(), e3_value.get(), e4_value.get())
+    view_command()
 
 window = Tk()
-window.title("Library master")
+window.wm_title("Library master")
 
 l1 = Label(window, text='Title', width=7)
 l1.grid(row=0, column=0)
@@ -77,14 +99,14 @@ b2.grid(row=3, column=3)
 b3 = Button(window, text='Add entry', width=12, command=insert_command)
 b3.grid(row=4, column=3)
 
-b4 = Button(window, text='Update selected', width=12, command=print('View all working'))
+b4 = Button(window, text='Update selected', width=12, command=update_command)
 b4.grid(row=5, column=3)
 
-b5 = Button(window, text='Delete selected', width=12) ##, command=delete_command
+b5 = Button(window, text='Delete selected', width=12, command=delete_command)
 b5.grid(row=6, column=3)
 
 
-b6 = Button(window, text='Close', width=12, command=print('View all working'))
+b6 = Button(window, text='Close', width=12, command=window.destroy)
 b6.grid(row=7, column=3)
 
 window.mainloop()

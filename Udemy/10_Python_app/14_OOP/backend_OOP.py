@@ -4,7 +4,7 @@ class Database:
 
 
 
-    def __init__():
+    def __init__(self):
         conn = sqlite3.connect('./books.db')
         cur = conn.cursor()
         cur.execute(
@@ -13,7 +13,7 @@ class Database:
         conn.close()
 
 
-    def insert(title, author, year, isbn):
+    def insert(self, title, author, year, isbn):
         conn = sqlite3.connect('books.db')
         cur = conn.cursor()
         cur.execute("INSERT INTO book VALUES (NULL, ?, ?, ?, ?)",

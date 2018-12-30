@@ -8,15 +8,13 @@ def view_command():
     for row in database.view():
         list1.insert(END, row)
 
-
 def search_command():
     list1.delete(0, END)
-    for row in backend.search(e1_value.get(), e2_value.get(), e3_value.get(), e4_value.get()):
+    for row in database.search(e1_value.get(), e2_value.get(), e3_value.get(), e4_value.get()):
         list1.insert(END, row)
 
-
 def insert_command():
-    backend.insert(e1_value.get(), e2_value.get(),
+    database.insert(e1_value.get(), e2_value.get(),
                    e3_value.get(), e4_value.get())
     list1.delete(0, END)
     row = e1_value.get(), e2_value.get(), e3_value.get(), e4_value.get()
@@ -40,11 +38,11 @@ def get_selected_row(event):
     except IndexError:
         pass
 def delete_command():
-    backend.delete(selected_tuple[0])
+    database.delete(selected_tuple[0])
     view_command()
 
 def update_command():
-    backend.update(selected_tuple[0], e1_value.get(),
+    database.update(selected_tuple[0], e1_value.get(),
                    e2_value.get(), e3_value.get(), e4_value.get())
     view_command()
 

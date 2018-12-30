@@ -1,7 +1,7 @@
 from tkinter import *
 from backend_OOP import Database
 
-database = Database()
+database = Database('books.db')
 
 def view_command():
     list1.delete(0, END)
